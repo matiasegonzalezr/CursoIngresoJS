@@ -4,7 +4,7 @@ y luego mostrarlo por 'alert' al presionar el botón  'mostrar'*/
 function mostrar()
 {
 
-	let nombre = "Mati"; // declaro la variable nombre y la inicializo con la cadena Mateico
+	let nombre = "Mati"; /* declaro la variable nombre y la inicializo con la cadena Mati */
 	nombre = prompt("ingresá tu nombre, amigo");
 	alert(nombre);
 
