@@ -34,19 +34,7 @@ function Circulo ()
     alambre = perimetro * 3;
 
     alert("Tenés que comprar " + alambre + "metros de alambre");
-    
 
-
-
-
-
-
-
-
-
-
-
-	
 }
 function Materiales () 
 {
