@@ -7,13 +7,16 @@ function mostrar()
 {
 	// tomo la edad
 	let edad;
+	let estadocivil;
 	
+	estadocivil = document.getElementById("estadoCivil").value;
 	edad = parseInt(document.getElementById("txtIdEdad").value);
 
+	if (edad > 18 && estadocivil != Soltero) {
+		alert("usted es muy pequeño");
+	} else {
+		alert("usted es muy pequeño para no ser soltero");
+	}
 
-
-
-
-
-
-}//FIN DE LA FUNCIÓN
+}
+//FIN DE LA FUNCIÓN

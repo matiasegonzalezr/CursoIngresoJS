@@ -1,23 +1,26 @@
 function mostrar()
 {
+
 	let edad = parseInt(document.getElementById("txtIdEdad").value);
 
-	if (edad >= 18)
-	{
-		alert("Usted es un adulto/a");
+	if (edad < 13)	{
+
+		alert("es niño");
 	}
-	else //* por qué  imprime ambos alerts?
-	{
-		alert("Eres un/a adolescente");
+	else {
+		if (edad >=13 && edad <= 17) {
+			alert("es adolescente");
+		 }
+		 else {
+			alert("es adulto");
+		 }
 	}
-	if (edad < 13)
-	{
-		alert("Eres un niño/a");
+
+	/*
+	if (edad < 13) {
+		alert ("es niño");
 	}
-
-
-
-
-
-
+	else if (edad < 18) {
+		alert("es adolescente");
+	}
 }//FIN DE LA FUNCIÓN
