@@ -14,9 +14,7 @@ function mostrar()
 
 	if (edad > 18 && estadocivil != Soltero) {
 		alert("usted es muy pequeño");
-	} else {
-		alert("usted es muy pequeño para no ser soltero");
-	}
+	} 
 
 }
 //FIN DE LA FUNCIÓN
