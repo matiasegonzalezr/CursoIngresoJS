@@ -1,6 +1,6 @@
 function mostrar()
 {
-	//tomo el mes
+	//tomo el mes ESTE CODIGO ESTÁ BIEN
 let mes;
 mes = document.getElementById("txtIdMes").value;
 

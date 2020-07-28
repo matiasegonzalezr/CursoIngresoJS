@@ -10,16 +10,104 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
+    const PRECIO = 35; // constantes siempre en MAYUSCULA.
+    let cantidad;
+    let descuento;
+    let marca;
+    let importeFinal; 
+    let IIBB;
+    let precioConDescuento;
 
-     const ArgentinaLuz;
-     const FelipeLamparas;
-     let Cantidad;
+    cantidad = parseInt(document.getElementById("txtIdCantidad").value);
+    marca = document.getElementById("Marca").value;
 
-     ArgentinaLuz = 35;
-     FelipeLamparas = 35;
+    switch (cantidad) {
+        case 1: 
+        case 2:
+            descuento = 0;
+            break;
+        case 3:
+            if (marca == "ArgentinaLuz") {
+                descuento = 15;
+            }
+            else if (marca == "FelipeLamparas") {
+                descuento = 10;
+            }
+            else {
+                descuento = 5;
+            }
+            break;
+
+        case 4: 
+            if (marca == "ArgentinaLuz" || marca == "FelipeLamparas") {
+            descuento = 25;
+        }
+            else {
+            descuento = 20;
+        }
+            break;
+        case 5: 
+            if (marca == "ArgentinaLuz") {
+                descuento = 40;
+            } 
+            else {
+                descuento = 30;
+            }
+            break;
+        default:  
+            descuento = 50;
+        
+    }
+
+    precioConDescuento = PRECIO - PRECIO * descuento / 100;
+    
+    precioConDescuento = document.getElementById("txtIdprecioDescuento").value;
+
+    importeFinal = precioConDescuento * cantidad; 
+    
+    if (importeFinal < 120) {
+
+        IIBB = importeFinal * 10 / 100;
+        importeFinal += IIBB;
+        alert(`Importe a pagar $ ${importeFinal}. Usted pagó $${IIBB} de ingresos brutos.`); 
+    }
+    else { 
+        alert(`Importe a pagar $ ${importefinal}`);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+    const ArgentinaLuz;
+    const FelipeLamparas;
+    const JeLuz;
+    const HazIluminacion;
+    const Osram;
+    let cantidad;
+    let descuento; 
+    ArgentinaLuz = 35;
+    FelipeLamparas = 35;
+    JeLuz = 35;
+    HazIluminacion = 35;
+    Osram = 35;
+    descuento = parseInt(document.getElementById("txtIdprecioDescuento").value);
+
+    
 
     Cantidad = parseInt(document.getElementById("txtIdCantidad").value);
-    if Cantidad > 6 
+    if (cantidad >= 6 && cantidad == ArgentinaLuz) {
+        alert()
+    }
+        */  
 
     
 }
