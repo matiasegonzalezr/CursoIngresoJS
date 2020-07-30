@@ -15,7 +15,7 @@ function mostrar()
 	if (destino == "Bariloche" || destino == "Ushuaia") {
 		alert ("ahí hace frío");
 	}
-	else if (destino == "Mar del plata" || destino == "Cataratas") {
+	else {
 		alert("ahí hace calor");
 	}
 

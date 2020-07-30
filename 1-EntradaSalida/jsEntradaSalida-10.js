@@ -11,7 +11,7 @@ function mostrarAumento()
 
 	importe = parseFloat(document.getElementById("txtIdImporte").value);
 	
-	// calculo el calculo del porcentaje del 25%
+	// calculo el porcentaje del 25%
 
 	descuento = importe * 25 / 100; 
 
