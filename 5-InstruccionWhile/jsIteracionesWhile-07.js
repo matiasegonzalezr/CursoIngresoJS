@@ -15,7 +15,7 @@ function mostrar()
 		
 		acumulador += numero; 
 	
-	} while (seguir == 's') ;
+	} while (seguir == 's') ; 
 
 	promedio = acumulador / 5;
 	document.getElementById("txtIdSuma").value = acumulador;

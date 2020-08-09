@@ -10,8 +10,7 @@ hasta que el usuario quiera, mostrar:
 7-Promedio de positivos. +
 8-Promedios de negativos. +
 9-Diferencia entre positivos y negativos, (positvos-negativos). */
-function mostrar()
-{
+function mostrar() {
 	let numero;
 	let seguir = 's';
 	let positivos = 0;
@@ -20,46 +19,57 @@ function mostrar()
 	let cantidadNegativos = 0;
 	let cantidadCeros = 0;
 	let pares = 0;
-do {
+	let promedioPositivos = 0;
+	let promedioNegativos = 0;
 
-	numero = parseInt(prompt('Ingresá un número'));
-	
-		
-	if ( numero > 0 && (numero % 2 == 0) ) {
 
-		positivos += numero;
-		cantidadPositivos = cantidadPositivos + 1;
-		pares ++;
+	do {
 
-	}
-	else if ( numero < 0) {		
+		numero = parseInt(prompt('Ingresá un número: ⬇️'));
 
-		negativos += numero;
-		cantidadNegativos++;
-		pares ++;
 
-	} else {
+		if (numero > 0 && (numero % 2 == 0)) {
 
-		cantidadCeros++;
+			positivos += numero;
+			cantidadPositivos ++;
+			pares++;
 
-	}
+		}
+		else if (numero < 0 && (numero % 2 == 0)) {
+
+			negativos += numero;
+			cantidadNegativos++;
+			pares++;
+
+		} else {
+
+			cantidadCeros++;
+
+		}
 
 		seguir = prompt('¿Querés ingresar otro número? Apretá "s" para continuar');
 
 	} while (seguir == 's');
 
+	if (cantidadPositivos > 0) {
+		promedioPositivos = positivos / cantidadPositivos;
+	} 
+	if (cantidadNegativos < 0) {
+		promedioNegativos = negativos / cantidadNegativos;
+	} 
 
 
 
-document.write('La suma de los números negativos es ' + parseInt(negativos) + "</br>");
-document.write('La suma de los números positivos es ' + parseInt(positivos) + "</br>");
-document.write('La cantidad de números positivos ingresada es ' + parseInt(cantidadPositivos) + "</br>");
-document.write('La cantidad de números negativos ingresada es ' + parseInt(cantidadNegativos) + "</br>");
-document.write('¡Increíble! ingresaste el ' + parseInt(cantidadCeros) + ' veces el número 0, WHY? ' + "</br>");
-document.write('La cantidad de números pares es ' + parseInt(pares) + "</br>");
-document.write('El promedio de los números positivos es ' + parseInt(positivos/cantidadPositivos) + "</br>");
-document.write('El promedio de los números negativos es ' + parseInt(negativos/cantidadNegativos) + "</br>");
-document.write('La diferencia entre los positivos y los negativos es ' + parseInt(positivos - negativos));
+
+	console.log('La suma de los números negativos es ' + parseInt(negativos) + "</br>");
+	console.log('La suma de los números positivos es ' + parseInt(positivos) + "</br>");
+	console.log('La cantidad de números positivos ingresada es ' + parseInt(cantidadPositivos) + "</br>");
+	console.log('La cantidad de números negativos ingresada es ' + parseInt(cantidadNegativos) + "</br>");
+	console.log('¡Increíble! ingresaste el ' + parseInt(cantidadCeros) + ' veces el número 0, WHY? ' + "</br>");
+	console.log('La cantidad de números pares es ' + parseInt(pares) + "</br>");
+	console.log('El promedio de los números positivos es ' + parseInt(promedioPositivos) + "</br>");
+	console.log('El promedio de los números negativos es ' + parseInt(promedioNegativos) + "</br>");
+	console.log('La diferencia entre los positivos y los negativos es ' + parseInt(positivos - negativos));
 
 
 
